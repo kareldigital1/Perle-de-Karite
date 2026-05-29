@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perle de Karité | Cosmétiques Naturels Premium - Bénin</title>
+    <meta name="description" content="Perle de Karité - Cosmétiques naturels premium au beurre de karité du Bénin. Naturellement belle, naturellement vous.">
+    <link rel="icon" href="images/logo.jpeg" type="image/jpeg">
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --vert-olive: #4A5D3E;
+            --vert-olive-dark: #36452C;
+            --vert-olive-light: #6B7E5A;
+            --beige: #EDE1CD;
+            --beige-light: #F5EFE4;
+            --dore: #CFB06D;
+            --dore-light: #E0C98D;
+            --dore-dark: #A88B44;
+            --blanc-casse: #FDFCF8;
+            --brun-karite: #8B6C52;
+            --brun-karite-dark: #6F533D;
+            --brun-karite-light: #A6866C;
+            --white: #ffffff;
+            --text-dark: #2C2418;
+            --text-medium: #5E5444;
+            --text-light: #8C8170;
+            --glass-bg: rgba(255, 255, 255, 0.12);
+            --glass-border: rgba(255, 255, 255, 0.22);
+            --glass-shadow: 0 8px 40px rgba(0, 0, 0, 0.05);
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-lg: 28px;
+            --radius-xl: 40px;
+            --transition: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --transition-fast: 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --transition-smooth: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--blanc-casse);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* ============ LOADER ============ */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--blanc-casse);
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+            pointer-events: all;
+        }
+        #loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .loader-content {
+            text-align: center;
+        }
+        .loader-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--vert-olive);
+            letter-spacing: 2px;
+            animation: loaderPulse 1.4s ease-in-out infinite;
+        }
+        .loader-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--dore);
+            margin: 0 3px;
+            animation: loaderDot 2s ease-in-out infinite;
+        }
+        .loader-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .loader-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        @keyframes loaderPulse {
+            0%,
+            100% {
+                opacity: 0.5;
+                transform: scale(0.96);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        @keyframes loaderDot {
+            0%,
+            80%,
+            100% {
+                transform: scale(0.4);
+                opacity: 0.3;
+            }
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* ============ NAVBAR ============ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 18px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: var(--transition-smooth);
+            background: transparent;
+        }
+        .navbar.scrolled {
+            background: rgba(253, 252, 248, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.06);
+            padding: 12px 40px;
+            border-bottom: 1px solid rgba(207, 176, 109, 0.2);
+        }
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--vert-olive);
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition-fast);
+            white-space: nowrap;
+        }
+        .nav-logo .logo-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--dore), var(--brun-karite));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            color: #fff;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--text-medium);
+            transition: var(--transition-fast);
+            position: relative;
+            padding: 4px 0;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background: var(--dore);
+            transition: var(--transition-fast);
+        }
+        .nav-links a:hover {
+            color: var(--vert-olive);
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        .nav-cta {
+            background: var(--vert-olive);
+            color: var(--white) !important;
+            padding: 10px 22px !important;
+            border-radius: 50px;
+            font-weight: 600 !important;
+            letter-spacing: 1px !important;
+            transition: var(--transition) !important;
+            text-decoration: none;
+            white-space: nowrap;
+            font-size: 0.78rem !important;
+        }
+        .nav-cta:hover {
+            background: var(--vert-olive-dark) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(74, 93, 62, 0.35);
+            color: var(--white) !important;
+        }
+        .nav-cta::after {
+            display: none !important;
+        }
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .nav-toggle span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background: var(--vert-olive);
+            transition: var(--transition-fast);
+            border-radius: 1px;
+        }
+        .nav-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .nav-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        @media (max-width: 1024px) {
+            .navbar {
+                padding: 14px 20px;
+            }
+            .navbar.scrolled {
+                padding: 10px 20px;
+            }
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--blanc-casse);
+                flex-direction: column;
+                padding: 100px 30px 40px;
+                gap: 20px;
+                transition: var(--transition-smooth);
+                box-shadow: -10px 0 40px rgba(0, 0, 0, 0.08);
+                z-index: 999;
+            }
+            .nav-links.active {
+                right: 0;
+            }
+            .nav-links a {
+                font-size: 0.85rem;
+            }
+            .nav-toggle {
+                display: flex;
+            }
+            .nav-cta {
+                text-align: center;
+                display: inline-block;
+            }
+        }
+
+        /* ============ HERO SECTION ============ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(165deg, #FDFCF8 0%, #F7F1E5 30%, #EDE1CD 60%, #FDFBF5 100%);
+            padding: 120px 40px 60px;
+        }
+        .hero-bg-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.22;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .hero-bg-orb.orb-1 {
+            width: 500px;
+            height: 500px;
+            background: #EDE1CD;
+            top: -15%;
+            right: -10%;
+            animation: orbFloat 10s ease-in-out infinite;
+        }
+        .hero-bg-orb.orb-2 {
+            width: 350px;
+            height: 350px;
+            background: #E0C98D;
+            bottom: -10%;
+            left: -8%;
+            opacity: 0.15;
+            animation: orbFloat 8s ease-in-out infinite reverse;
+        }
+        .hero-bg-orb.orb-3 {
+            width: 280px;
+            height: 280px;
+            background: #6B7E5A;
+            top: 40%;
+            left: 30%;
+            opacity: 0.1;
+            animation: orbFloat 12s ease-in-out infinite 2s;
+        }
+        @keyframes orbFloat {
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+            25% {
+                transform: translate(30px, -40px) scale(1.08);
+            }
+            50% {
+                transform: translate(-15px, 25px) scale(0.94);
+            }
+            75% {
+                transform: translate(20px, 15px) scale(1.05);
+            }
+        }
+        .hero-container {
+            max-width: 1300px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-text {
+            animation: fadeInUp 1s ease forwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(207, 176, 109, 0.18);
+            color: var(--dore-dark);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            padding: 8px 18px;
+            border-radius: 50px;
+            margin-bottom: 22px;
+            border: 1px solid rgba(207, 176, 109, 0.35);
+        }
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+            font-weight: 700;
+            line-height: 1.15;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+        .hero-title span {
+            color: var(--vert-olive);
+            font-style: italic;
+            display: block;
+            font-size: 0.85em;
+            font-weight: 500;
+            letter-spacing: 0px;
+            margin-top: 2px;
+        }
+        .hero-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: var(--text-medium);
+            margin-bottom: 30px;
+            line-height: 1.6;
+            max-width: 450px;
+        }
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            white-space: nowrap;
+        }
+        .btn-primary {
+            background: var(--vert-olive);
+            color: var(--white);
+            box-shadow: 0 6px 25px rgba(74, 93, 62, 0.3);
+        }
+        .btn-primary:hover {
+            background: var(--vert-olive-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 14px 35px rgba(74, 93, 62, 0.45);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--vert-olive);
+            border: 1.5px solid var(--vert-olive);
+        }
+        .btn-outline:hover {
+            background: var(--vert-olive);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(74, 93, 62, 0.25);
+        }
+        .btn-whatsapp {
+            background: #25D366;
+            color: #fff;
+            border: none;
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.3);
+        }
+        .btn-whatsapp:hover {
+            background: #1fb855;
+            transform: translateY(-3px);
+            box-shadow: 0 14px 35px rgba(37, 211, 102, 0.4);
+        }
+        .hero-stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        .hero-stat {
+            text-align: center;
+        }
+        .hero-stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--dore);
+            line-height: 1;
+        }
+        .hero-stat-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+        .hero-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            animation: fadeInUp 1s ease 0.2s forwards;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+        .hero-product-card {
+            width: 320px;
+            height: 420px;
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-product-img {
+            width: 180px;
+            height: 220px;
+            background: linear-gradient(180deg, #FDFAF3 0%, #EBD9B3 50%, #D4B896 100%);
+            border-radius: var(--radius-lg);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            box-shadow: 0 20px 50px rgba(139, 108, 82, 0.2);
+        }
+        .hero-product-glow {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: var(--dore);
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.25;
+            top: 20%;
+        }
+        .hero-floating-tag {
+            position: absolute;
+            background: var(--white);
+            padding: 10px 16px;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: var(--vert-olive);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            z-index: 3;
+        }
+        .hero-floating-tag.tag-1 {
+            top: 25%;
+            right: 8%;
+            animation: tagFloat 4s ease-in-out infinite;
+        }
+        .hero-floating-tag.tag-2 {
+            bottom: 30%;
+            left: 5%;
+            animation: tagFloat 4s ease-in-out infinite 1s;
+        }
+        @keyframes tagFloat {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-16px);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 30px;
+            }
+            .hero-subtitle {
+                margin: 0 auto 24px;
+                max-width: 100%;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .hero-stats {
+                justify-content: center;
+            }
+            .hero-product-card {
+                width: 240px;
+                height: 330px;
+            }
+            .hero-product-img {
+                width: 130px;
+                height: 160px;
+                font-size: 3.5rem;
+            }
+            .hero {
+                padding: 100px 20px 40px;
+            }
+            .hero-floating-tag {
+                display: none;
+            }
+        }
+
+        /* ============ SECTION STYLES ============ */
+        .section {
+            padding: 90px 40px;
+            position: relative;
+        }
+        .section-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--dore-dark);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            text-align: center;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+        .section-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            text-align: center;
+            color: var(--text-medium);
+            max-width: 600px;
+            margin: 0 auto 50px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* ============ REVEAL ANIMATION ============ */
+        .reveal {
+            opacity: 1;
+            transform: none;
+            transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        html.js .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        html.js .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
+
+        /* ============ ABOUT SECTION ============ */
+        #about { background: var(--white); position: relative; overflow: hidden; }
+        #about::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: #EDE1CD;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.25;
+            top: -10%;
+            right: -10%;
+            pointer-events: none;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .about-visual { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+        .about-img-card {
+            width: 160px;
+            height: 200px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+        .about-img-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1); }
+        .about-img-card:nth-child(1) { background: linear-gradient(160deg, #F6F0E3 0%, #E8D5B0 60%, #C9A87C 100%); margin-top: 20px; }
+        .about-img-card:nth-child(2) { background: linear-gradient(160deg, #EDE1CD 0%, #D4C4A0 50%, #B8956A 100%); margin-top: -20px; }
+        .about-img-card:nth-child(3) { background: linear-gradient(160deg, #FBF7EF 0%, #E0D3B8 50%, #C4A878 100%); margin-top: 30px; }
+        .about-text h3 { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--text-dark); margin-bottom: 16px; }
+        .about-text p { color: var(--text-medium); margin-bottom: 14px; line-height: 1.8; font-size: 0.95rem; }
+        .about-values { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+        .about-value-tag {
+            background: rgba(74, 93, 62, 0.08);
+            color: var(--vert-olive);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border: 1px solid rgba(74, 93, 62, 0.2);
+        }
+
+        @media (max-width: 900px) {
+            .about-grid { grid-template-columns: 1fr; gap: 30px; }
+            .about-visual { order: -1; }
+            .about-img-card { width: 120px; height: 150px; }
+            .section { padding: 60px 18px; }
+        }
+
+        /* ============ PRODUCTS SECTION ============ */
+        #products { background: var(--blanc-casse); }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 28px;
+        }
+        .product-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            transition: var(--transition);
+            position: relative;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+            border-color: rgba(207, 176, 109, 0.3);
+        }
+        .product-img {
+            height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4.5rem;
+            position: relative;
+            overflow: hidden;
+            padding: 0;
+        }
+        .product-img-bg {
+            position: absolute;
+            inset: 0;
+            transition: var(--transition-smooth);
+        }
+        .product-card:hover .product-img-bg { transform: scale(1.08); }
+        .product-img-1 { background: linear-gradient(160deg, #FDFAF3 0%, #EFE4CF 50%, #DCC9A0 100%); }
+        .product-img-2 { background: linear-gradient(160deg, #FDFCF8 0%, #E8DDD0 50%, #D5C4A8 100%); }
+        .product-img-3 { background: linear-gradient(160deg, #FEFDF9 0%, #F0E8D5 50%, #E0CDAB 100%); }
+        .product-img-4 { background: linear-gradient(160deg, #FCFAF5 0%, #EDE2CC 50%, #DAC8A5 100%); }
+        .product-img img {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: var(--transition);
+        }
+        .product-card:hover .product-img img {
+            transform: scale(1.05);
+        }
+        .product-badge {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: var(--dore);
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 50px;
+            letter-spacing: 1px;
+            z-index: 2;
+        }
+        .product-info {
+            padding: 20px 22px 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-category {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--dore-dark);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .product-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+        .product-desc {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        .product-benefits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+        .product-benefit {
+            font-size: 0.65rem;
+            background: rgba(74, 93, 62, 0.06);
+            color: var(--vert-olive);
+            padding: 4px 10px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+        }
+        .product-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--brun-karite);
+            margin-bottom: 14px;
+            margin-top: auto;
+        }
+        .product-btn {
+            width: 100%;
+            text-align: center;
+            background: var(--vert-olive);
+            color: #fff;
+            border: none;
+            padding: 12px;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+        }
+        .product-btn:hover {
+            background: var(--vert-olive-dark);
+            box-shadow: 0 8px 25px rgba(74, 93, 62, 0.35);
+            transform: translateY(-2px);
+        }
+        .detail-btn {
+            width: 100%;
+            text-align: center;
+            background: transparent;
+            color: var(--vert-olive);
+            border: 1.5px solid var(--vert-olive);
+            padding: 10px;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .detail-btn:hover {
+            background: var(--vert-olive);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(74, 93, 62, 0.25);
+        }
+
+        /* ============ BENEFITS SECTION ============ */
+        #benefits { background: var(--white); position: relative; }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 22px;
+        }
+        .benefit-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: var(--radius-md);
+            background: var(--blanc-casse);
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+        .benefit-card:hover {
+            border-color: rgba(207, 176, 109, 0.35);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+            transform: translateY(-4px);
+        }
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            background: linear-gradient(135deg, rgba(207, 176, 109, 0.18), rgba(139, 108, 82, 0.12));
+        }
+        .benefit-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 6px; }
+        .benefit-card p { font-size: 0.75rem; color: var(--text-light); line-height: 1.5; }
+
+        /* ============ TESTIMONIALS SECTION ============ */
+        #testimonials { background: var(--white); }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+        .testimonial-card { background: var(--blanc-casse); border-radius: var(--radius-lg); padding: 28px; transition: var(--transition); border: 1px solid transparent; }
+        .testimonial-card:hover { border-color: rgba(207, 176, 109, 0.3); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04); transform: translateY(-3px); }
+        .testimonial-stars { color: var(--dore); font-size: 1rem; letter-spacing: 2px; margin-bottom: 12px; }
+        .testimonial-text { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-style: italic; color: var(--text-medium); line-height: 1.7; margin-bottom: 16px; }
+        .testimonial-author { font-family: 'Montserrat', sans-serif; font-size: 0.8rem; font-weight: 600; color: var(--text-dark); }
+        .testimonial-author span { display: block; font-weight: 400; font-size: 0.7rem; color: var(--text-light); letter-spacing: 1px; }
+
+        /* ============ FAQ SECTION ============ */
+        #faq { background: var(--blanc-casse); }
+        .faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+        .faq-item { background: var(--white); border-radius: var(--radius-md); overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.04); transition: var(--transition-fast); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02); }
+        .faq-item.active { border-color: rgba(207, 176, 109, 0.4); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05); }
+        .faq-question { padding: 18px 24px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--text-dark); user-select: none; transition: var(--transition-fast); gap: 16px; }
+        .faq-icon { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: rgba(74, 93, 62, 0.08); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; transition: var(--transition-fast); color: var(--vert-olive); }
+        .faq-item.active .faq-icon { transform: rotate(45deg); background: var(--vert-olive); color: #fff; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.22, 1, 0.36, 1), padding 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
+        .faq-item.active .faq-answer { max-height: 300px; padding: 0 24px 18px; }
+        .faq-answer p { font-size: 0.85rem; color: var(--text-medium); line-height: 1.7; }
+
+        /* ============ CONTACT SECTION ============ */
+        #contact { background: var(--white); position: relative; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+        .contact-form { display: flex; flex-direction: column; gap: 16px; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 14px 18px; border: 1.5px solid rgba(0, 0, 0, 0.08); border-radius: var(--radius-sm); font-family: 'Montserrat', sans-serif; font-size: 0.85rem; background: var(--blanc-casse); transition: var(--transition-fast); resize: vertical; color: var(--text-dark); }
+        .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--dore); box-shadow: 0 0 0 4px rgba(207, 176, 109, 0.1); background: #fff; }
+        .contact-form textarea { min-height: 120px; }
+        .contact-form .btn { align-self: flex-start; }
+        .contact-info { display: flex; flex-direction: column; gap: 20px; }
+        .contact-info-item { display: flex; gap: 14px; align-items: flex-start; }
+        .contact-info-icon { width: 44px; height: 44px; border-radius: 50%; background: rgba(74, 93, 62, 0.08); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+        .contact-info-text h4 { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; color: var(--text-dark); }
+        .contact-info-text p { font-size: 0.8rem; color: var(--text-light); }
+
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ============ FOOTER ============ */
+        .footer { background: #2C2418; color: #F5EFE4; padding: 50px 40px 20px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 30px; margin-bottom: 30px; }
+        .footer-col h4 { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 14px; color: #E0C98D; }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .footer-col ul li a { color: #EDE1CD; text-decoration: none; font-size: 0.8rem; transition: var(--transition-fast); letter-spacing: 0.5px; }
+        .footer-col ul li a:hover { color: #CFB06D; }
+        .footer-social { display: flex; gap: 12px; margin-top: 8px; }
+        .footer-social a { width: 36px; height: 36px; border-radius: 50%; background: rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; font-size: 1rem; text-decoration: none; transition: var(--transition-fast); color: #EDE1CD; }
+        .footer-social a:hover { background: #CFB06D; color: #fff; }
+        .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 18px; text-align: center; font-size: 0.7rem; letter-spacing: 1px; color: #EDE1CD; opacity: 0.7; }
+        .footer-logo-text { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: #E0C98D; margin-bottom: 4px; }
+        .container-fluid { width: 100%; padding-left: 15px; padding-right: 15px; }
+
+        /* ============ WHATSAPP FLOATING BUTTON ============ */
+        .whatsapp-float {
+            position: fixed; bottom: 28px; right: 28px; z-index: 999;
+            width: 58px; height: 58px; border-radius: 50%; background: #25D366;
+            color: #fff; display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem; text-decoration: none;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            animation: wpPulse 2.2s ease-in-out infinite;
+            transition: var(--transition-fast); cursor: pointer; border: none;
+        }
+        .whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 14px 40px rgba(37, 211, 102, 0.55); animation: none; }
+        @keyframes wpPulse {
+            0%, 100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 8px 50px rgba(37, 211, 102, 0.7), 0 0 0 16px rgba(37, 211, 102, 0.08); }
+        }
+        .whatsapp-float-tooltip {
+            position: absolute; right: 68px; background: #fff; color: var(--text-dark);
+            padding: 8px 16px; border-radius: 20px; font-size: 0.7rem; font-weight: 600;
+            white-space: nowrap; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            opacity: 0; pointer-events: none; transition: var(--transition-fast); letter-spacing: 0.5px;
+        }
+        .whatsapp-float:hover .whatsapp-float-tooltip { opacity: 1; }
+
+        @media (max-width: 600px) {
+            .whatsapp-float { width: 50px; height: 50px; bottom: 18px; right: 16px; font-size: 1.5rem; }
+            .whatsapp-float-tooltip { display: none; }
+        }
+
+        /* ============ BACK TO TOP ============ */
+        .back-to-top {
+            position: fixed; bottom: 100px; right: 28px; z-index: 998;
+            width: 40px; height: 40px; border-radius: 50%; background: var(--vert-olive);
+            color: #fff; display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem; cursor: pointer; border: none; opacity: 0; pointer-events: none;
+            transition: var(--transition-fast); box-shadow: 0 4px 15px rgba(74, 93, 62, 0.3);
+        }
+        .back-to-top.visible { opacity: 1; pointer-events: all; }
+        .back-to-top:hover { background: var(--vert-olive-dark); transform: translateY(-3px); }
+
+        /* ============ MODAL ============ */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.55);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .modal.active {
+            display: flex;
+        }
+        .modal-content {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            max-width: 650px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+            padding: 40px 35px;
+            position: relative;
+            animation: modalFadeIn 0.4s ease;
+            border: 1px solid rgba(207,176,109,0.25);
+        }
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .modal-close {
+            position: absolute;
+            top: 18px; right: 22px;
+            background: none; border: none;
+            font-size: 1.6rem;
+            color: var(--text-medium);
+            cursor: pointer;
+            transition: var(--transition-fast);
+            width: 36px; height: 36px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+        }
+        .modal-close:hover {
+            background: rgba(74,93,62,0.08);
+            color: var(--vert-olive);
+        }
+        .modal-img {
+            width: 100%;
+            height: 180px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .modal-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        .modal-category {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--dore-dark);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .modal-desc {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .modal-benefits-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--vert-olive);
+        }
+        .modal-benefits-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .modal-benefits-list li {
+            background: rgba(74,93,62,0.06);
+            color: var(--vert-olive);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        .modal-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--brun-karite);
+            margin: 15px 0;
+        }
+        .modal-whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #25D366;
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.8rem;
+        }
+        .modal-whatsapp-btn:hover {
+            background: #1fb855;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(37,211,102,0.4);
+        }
+
+        /* ============ FORM VALIDATION ============ */
+        .form-error { border-color: #e74c3c !important; background: #fff5f5 !important; }
+        .form-success-msg { display: none; background: #eaf7ea; color: #2d6a2d; padding: 14px 18px; border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.5px; }
+        .form-success-msg.show { display: block; }
+
+        /* ============ SCROLLBAR ============ */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--blanc-casse); }
+        ::-webkit-scrollbar-thumb { background: #EDE1CD; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #CFB06D; }
+
+        /* ============ SELECTION ============ */
+        ::selection { background: rgba(207, 176, 109, 0.25); color: var(--text-dark); }
+
+        /* ============ MOBILE ADJUSTMENTS ============ */
+        @media (max-width: 600px) {
+            .hero-stats { gap: 16px; }
+            .hero-stat-number { font-size: 1.5rem; }
+            .products-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .product-img { height: 160px; font-size: 3rem; }
+            .product-info { padding: 12px 14px 18px; }
+            .product-name { font-size: 1rem; }
+            .product-price { font-size: 1.2rem; }
+            .product-btn { font-size: 0.68rem; padding: 10px; }
+            .detail-btn { font-size: 0.65rem; padding: 8px; }
+            .benefits-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .benefit-card { padding: 20px 12px; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .modal-content { padding: 25px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== LOADER ==================== -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-logo"><i class="fas fa-leaf"></i> &nbsp;PERLE DE KARITÉ</div>
+            <div style="margin-top:12px;">
+                <span class="loader-dot"></span><span class="loader-dot"></span><span class="loader-dot"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="nav-logo">
+            <span class="logo-icon"><i class="fas fa-leaf"></i></span> Perle de Karité
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about" onclick="closeNav()">À propos</a></li>
+            <li><a href="#products" onclick="closeNav()">Produits</a></li>
+            <li><a href="#benefits" onclick="closeNav()">Avantages</a></li>
+            <li><a href="#testimonials" onclick="closeNav()">Avis</a></li>
+            <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+            <li><a href="https://wa.me/2290196633435?text=Bonjour%2C%20je%20souhaite%20d%C3%A9couvrir%20les%20produits%20PERLE%20DE%20KARIT%C3%89." target="_blank" class="nav-cta"><i class="fab fa-whatsapp"></i> Commander</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-orb orb-1"></div>
+        <div class="hero-bg-orb orb-2"></div>
+        <div class="hero-bg-orb orb-3"></div>
+        <div class="hero-container">
+            <div class="hero-text">
+                <span class="hero-badge"><i class="fas fa-leaf"></i> Cosmétiques naturels • Bénin</span>
+                <h1 class="hero-title">
+                    Perle de Karité
+                    <span>Naturellement belle, naturellement vous</span>
+                </h1>
+                <p class="hero-subtitle">
+                    L'excellence du karité béninois dans des soins naturels d'exception. Une beauté africaine authentique, raffinée et luxueuse.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary"><i class="fas fa-leaf"></i> Découvrir nos produits</a>
+                    <a href="https://wa.me/2290196633435?text=Bonjour%2C%20je%20souhaite%20d%C3%A9couvrir%20les%20produits%20PERLE%20DE%20KARIT%C3%89." target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Commander sur WhatsApp</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-number" data-count="100">0</div>
+                        <div class="hero-stat-label">% Naturel</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number" data-count="1000">0</div>
+                        <div class="hero-stat-label">Clientes satisfaites</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number" data-count="3">0</div>
+                        <div class="hero-stat-label">Produits premium</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-product-card">
+                    <div class="hero-product-glow"></div>
+                    <div class="hero-product-img">
+                        <img src="images/orvegetal.jpg" alt="Beurre de Karité Pur" style="width:100%;height:100%;object-fit:contain;object-position:center;border-radius:var(--radius-lg);">
+                    </div>
+                    <div style="text-align:center;margin-top:14px;position:relative;z-index:1;">
+                        <p style="font-family:'Playfair Display',serif;font-weight:600;color:var(--text-dark);">Beurre de Karité Pur</p>
+                        <p style="font-size:0.7rem;color:var(--dore-dark);letter-spacing:1px;">OR VÉGÉTAL DU BÉNIN</p>
+                    </div>
+                </div>
+                <div class="hero-floating-tag tag-1"><i class="fas fa-leaf"></i> 100% Naturel</div>
+                <div class="hero-floating-tag tag-2"><i class="fas fa-flag"></i> Made in Benin</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section class="section" id="about">
+        <div class="container">
+            <p class="section-label reveal">Notre Histoire</p>
+            <h2 class="section-title reveal reveal-delay-1">L'essence du karité béninois</h2>
+            <p class="section-subtitle reveal reveal-delay-2">Une marque née de la terre africaine, portée par des siècles de tradition et une vision résolument moderne de la beauté naturelle.</p>
+            <div class="about-grid">
+                <div class="about-visual reveal reveal-delay-2">
+                    <div class="about-img-card"></div>
+                    <div class="about-img-card"></div>
+                    <div class="about-img-card"></div>
+                </div>
+                <div class="about-text reveal reveal-delay-3">
+                    <h3>Une beauté qui vient de la terre</h3>
+                    <p>
+                        <strong>Perle de Karité</strong> puise son essence au cœur du Bénin, là où le karité est récolté avec respect et transformé selon des méthodes artisanales ancestrales. Chaque produit incarne l'alliance parfaite entre la richesse naturelle africaine et l'exigence de la cosmétique premium internationale.
+                    </p>
+                    <p>
+                        Notre mission : sublimer la beauté naturelle de chaque femme grâce à des soins d'exception, sans compromis sur la qualité, l'éthique et le raffinement. Nous croyons en une beauté authentique, consciente et rayonnante.
+                    </p>
+                    <div class="about-values">
+                        <span class="about-value-tag"><i class="fas fa-flag"></i> Made in Benin</span>
+                        <span class="about-value-tag"><i class="fas fa-leaf"></i> 100% Naturel</span>
+                        <span class="about-value-tag"><i class="fas fa-hands-helping"></i> Artisanat local</span>
+                        <span class="about-value-tag"><i class="fas fa-crown"></i> Luxe éthique</span>
+                        <span class="about-value-tag"><i class="fas fa-heart"></i> Sans cruauté</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PRODUCTS SECTION ==================== -->
+    <section class="section" id="products">
+        <div class="container">
+            <p class="section-label reveal">Notre Collection</p>
+            <h2 class="section-title reveal reveal-delay-1">Des soins d'exception</h2>
+            <p class="section-subtitle reveal reveal-delay-2">Découvrez notre gamme complète de cosmétiques au karité, formulés pour révéler votre éclat naturel.</p>
+            <div class="products-grid">
+                <!-- Produit 1 -->
+                <div class="product-card reveal reveal-delay-1" data-product="1">
+                    <div class="product-img product-img-1">
+                        <img src="images/huil.jpeg" alt="Crème Visage Éclat">
+                        <span class="product-badge">Best-seller</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Soin visage</p>
+                        <h3 class="product-name">Crème Visage Éclat</h3>
+                        <p class="product-desc">Une crème hydratante et raffermissante, formulée avec du karité pour un teint lumineux et éclatant.</p>
+                        <div class="product-benefits">
+                            <span class="product-benefit">Hydratation intense</span>
+                            <span class="product-benefit">Éclat naturel</span>
+                        </div>
+                        <p class="product-price">4 000 - 7 000 FCFA</p>
+                        <button class="detail-btn" onclick="openProductModal(1)"><i class="fas fa-info-circle"></i> Voir détail</button>
+                        <a href="https://wa.me/2290196633435?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20Cr%C3%A8me%20Visage%20%C3%89clat." target="_blank" class="product-btn"><i class="fab fa-whatsapp"></i> Commander</a>
+                    </div>
+                </div>
+                
+                <!-- Produit 2 -->
+                <div class="product-card reveal reveal-delay-2" data-product="2">
+                    <div class="product-img product-img-2">
+                        <img src="images/creme.jpeg" alt="Beurre de Karité Pur">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Soin pur</p>
+                        <h3 class="product-name">Beurre de Karité Pur</h3>
+                        <p class="product-desc">Karité brut non raffiné, pressé à froid. L'or végétal dans sa forme la plus pure.</p>
+                        <div class="product-benefits">
+                            <span class="product-benefit">Hydratation intense</span>
+                            <span class="product-benefit">Anti-âge</span>
+                        </div>
+                        <p class="product-price">2 500 - 5 000 FCFA</p>
+                        <button class="detail-btn" onclick="openProductModal(2)"><i class="fas fa-info-circle"></i> Voir détail</button>
+                        <a href="https://wa.me/2290196633435?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20le%20Beurre%20de%20Karité%20Pur." target="_blank" class="product-btn"><i class="fab fa-whatsapp"></i> Commander</a>
+                    </div>
+                </div>
+                
+                <!-- Produit 3 -->
+                <div class="product-card reveal reveal-delay-3" data-product="3">
+                    <div class="product-img product-img-3">
+                        <img src="images/serum.jpeg" alt="Huile Capillaire">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Soin capillaire</p>
+                        <h3 class="product-name">Huile Capillaire</h3>
+                        <p class="product-desc">Sérum capillaire au karité et huiles végétales pour cheveux forts et brillants.</p>
+                        <div class="product-benefits">
+                            <span class="product-benefit">Fortifiant</span>
+                            <span class="product-benefit">Brillance</span>
+                        </div>
+                        <p class="product-price">3 500 - 6 000 FCFA</p>
+                        <button class="detail-btn" onclick="openProductModal(3)"><i class="fas fa-info-circle"></i> Voir détail</button>
+                        <a href="https://wa.me/2290196633435?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20l'Huile%20Capillaire." target="_blank" class="product-btn"><i class="fab fa-whatsapp"></i> Commander</a>
+                    </div>
+                </div>
+                <!-- Produit 4 -->
+                <div class="product-card reveal reveal-delay-4" data-product="4">
+                    <div class="product-img product-img-4">
+                        <img src="images/kit.jpeg" alt="Kit Soin Complet">
+                        <span class="product-badge">Coffret</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Coffret</p>
+                        <h3 class="product-name">Kit Soin Complet</h3>
+                        <p class="product-desc">La routine parfaite : beurre pur, crème visage, baume lèvres et savon artisanal.</p>
+                        <div class="product-benefits">
+                            <span class="product-benefit">Routine complète</span>
+                            <span class="product-benefit">Idée cadeau</span>
+                        </div>
+                        <p class="product-price">18 000 FCFA</p>
+                        <button class="detail-btn" onclick="openProductModal(4)"><i class="fas fa-info-circle"></i> Voir détail</button>
+                        <a href="https://wa.me/2290196633435?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20le%20Kit%20Soin%20Complet." target="_blank" class="product-btn"><i class="fab fa-whatsapp"></i> Commander</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== BENEFITS SECTION ==================== -->
+    <section class="section" id="benefits">
+        <div class="container">
+            <p class="section-label reveal">Pourquoi nous choisir</p>
+            <h2 class="section-title reveal reveal-delay-1">L'excellence naturelle</h2>
+            <p class="section-subtitle reveal reveal-delay-2">Chaque produit Perle de Karité est une promesse de qualité, d'authenticité et de respect de votre peau.</p>
+            <div class="benefits-grid">
+                <div class="benefit-card reveal reveal-delay-1">
+                    <div class="benefit-icon"><i class="fas fa-leaf"></i></div>
+                    <h4>100% Naturel</h4>
+                    <p>Ingrédients purs, sans additifs chimiques ni conservateurs artificiels.</p>
+                </div>
+                <div class="benefit-card reveal reveal-delay-2">
+                    <div class="benefit-icon">🇧🇯</div>
+                    <h4>Ingrédients africains</h4>
+                    <p>Karité béninois récolté localement, tracé et équitable.</p>
+                </div>
+                <div class="benefit-card reveal reveal-delay-3">
+                    <div class="benefit-icon"><i class="fas fa-ban"></i></div>
+                    <h4>Sans produits chimiques</h4>
+                    <p>Zéro paraben, zéro sulfate, zéro silicone. Rien que le meilleur de la nature.</p>
+                </div>
+                <div class="benefit-card reveal reveal-delay-1">
+                    <div class="benefit-icon"><i class="fas fa-tint"></i></div>
+                    <h4>Hydratation intense</h4>
+                    <p>Le karité nourrit en profondeur et restaure la barrière cutanée.</p>
+                </div>
+                <div class="benefit-card reveal reveal-delay-2">
+                    <div class="benefit-icon"><i class="fas fa-globe-africa"></i></div>
+                    <h4>Fabrication locale</h4>
+                    <p>Transformé artisanalement au Bénin par des mains expertes.</p>
+                </div>
+                <div class="benefit-card reveal reveal-delay-3">
+                    <div class="benefit-icon"><i class="fas fa-gem"></i></div>
+                    <h4>Luxe accessible</h4>
+                    <p>L'excellence premium à un prix juste, pour toutes les femmes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS SECTION ==================== -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <p class="section-label reveal">Témoignages</p>
+            <h2 class="section-title reveal reveal-delay-1">Elles nous font confiance</h2>
+            <p class="section-subtitle reveal reveal-delay-2">La satisfaction de nos clientes est notre plus belle récompense.</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Une révélation ! Ma peau n'a jamais été aussi douce et lumineuse. Le beurre de karité pur est un trésor. Je ne peux plus m'en passer."</p>
+                    <p class="testimonial-author">Marie-Claire A.<span>Cotonou, Bénin</span></p>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"J'ai offert le Kit Soin Complet à ma mère. Elle est ravie. La qualité est digne des plus grandes marques internationales."</p>
+                    <p class="testimonial-author">Sophie D.<span>Calavi, Bénin</span></p>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-3">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Enfin une marque africaine qui allie luxe et naturalité. Le packaging est sublime, les produits sont exceptionnels."</p>
+                    <p class="testimonial-author">Aminata K.<span>Parakou, Bénin</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ SECTION ==================== -->
+    <section class="section" id="faq">
+        <div class="container">
+            <p class="section-label reveal">Questions fréquentes</p>
+            <h2 class="section-title reveal reveal-delay-1">Tout savoir sur nos produits</h2>
+            <div class="faq-list reveal reveal-delay-2">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Comment est fabriqué votre beurre de karité ?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Notre beurre de karité est extrait de noix récoltées au Bénin, pressées à froid selon des méthodes artisanales ancestrales. Aucun solvant chimique n'est utilisé. Le résultat est un beurre pur, riche en vitamines A, E et F.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Vos produits conviennent-ils aux peaux sensibles ?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolument. Tous nos produits sont formulés sans parfums synthétiques, sans parabènes et sans sulfates. Ils sont testés dermatologiquement et conviennent parfaitement aux peaux les plus sensibles et réactives.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Où puis-je acheter vos produits ?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Vous pouvez commander directement via WhatsApp en cliquant sur les boutons présents sur le site. Nous livrons partout au Bénin et dans toute la sous-région. Paiement à la livraison disponible.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Quelle est la durée de conservation de vos produits ?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nos produits naturels se conservent entre 12 et 18 mois après ouverture. Nous recommandons de les conserver à l'abri de la chaleur et de l'humidité pour préserver toutes leurs propriétés.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="section" id="contact">
+        <div class="container">
+            <p class="section-label reveal">Contactez-nous</p>
+            <h2 class="section-title reveal reveal-delay-1">Une question ? Écrivez-nous</h2>
+            <p class="section-subtitle reveal reveal-delay-2">Notre équipe est à votre écoute pour toute demande d'information ou commande personnalisée.</p>
+            <div class="contact-grid">
+                <form class="contact-form reveal reveal-delay-2" id="contactForm" action="https://formspree.io/f/VOTRE_ID" method="POST">
+                    <input type="text" placeholder="Votre nom complet" id="contactName" name="nom" required>
+                    <input type="email" placeholder="Votre adresse email" id="contactEmail" name="email" required>
+                    <input type="tel" placeholder="Votre numéro de téléphone" id="contactPhone" name="telephone">
+                    <textarea placeholder="Votre message..." id="contactMessage" name="message" required></textarea>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Envoyer le message</button>
+                    <div class="form-success-msg" id="formSuccessMsg"><i class="fas fa-check-circle"></i> Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.</div>
+                </form>
+                <div class="contact-info reveal reveal-delay-3">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-info-text">
+                            <h4>Adresse</h4>
+                            <p>Cotonou, Bénin</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-info-text">
+                            <h4>Téléphone</h4>
+                            <p>+229 01 96 63 34 35<br>Mar - Sam : 8h - 19h</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-info-text">
+                            <h4>Email</h4>
+                            <p>feliciteyekodji8@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-comments"></i></div>
+                        <div class="contact-info-text">
+                            <h4>WhatsApp</h4>
+                            <p>+229 01 96 63 34 35<br>Réponse rapide garantie</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo-text"><i class="fas fa-leaf"></i>&nbsp;Perle de Karité</div>
+                    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:#E0C98D;margin-bottom:8px;">Naturellement belle, naturellement vous</p>
+                    <p style="font-size:0.75rem;color:#EDE1CD;opacity:0.7;">Cosmétiques naturels premium au karité du Bénin. L'excellence africaine à l'état pur.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#products">Produits</a></li>
+                        <li><a href="#benefits">Avantages</a></li>
+                        <li><a href="#testimonials">Avis</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Produits</h4>
+                    <ul>
+                        <li><a href="#products">Beurre de Karité Pur</a></li>
+                        <li><a href="#products">Crème Visage Éclat</a></li>
+                        <li><a href="#products">Huile Capillaire</a></li>
+                        <li><a href="#products">Kit Soin Complet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suivez-nous</h4>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/2290196633435" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 Perle de Karité. Tous droits réservés. Made with <i class="fas fa-heart"></i> in Benin.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== MODAL ==================== -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            <div class="modal-img" id="modalImg">
+                <img src="" alt="" id="modalImageSrc">
+            </div>
+            <p class="modal-category" id="modalCategory"></p>
+            <h3 class="modal-title" id="modalTitle"></h3>
+            <p class="modal-desc" id="modalDesc"></p>
+            <div class="modal-benefits-title">Avantages clés</div>
+            <ul class="modal-benefits-list" id="modalBenefits"></ul>
+            <p class="modal-price" id="modalPrice"></p>
+            <a href="#" class="modal-whatsapp-btn" id="modalWhatsappBtn" target="_blank"><i class="fab fa-whatsapp"></i> Commander ce produit</a>
+        </div>
+    </div>
+
+    <!-- ==================== WHATSAPP FLOATING BUTTON ==================== -->
+    <a href="https://wa.me/2290196633435?text=Bonjour%2C%20je%20souhaite%20d%C3%A9couvrir%20les%20produits%20PERLE%20DE%20KARIT%C3%89." target="_blank" class="whatsapp-float" id="whatsappFloat" aria-label="Commander sur WhatsApp">
+        <span class="whatsapp-float-tooltip">Discutons ! <i class="fas fa-comments"></i></span>
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ==================== BACK TO TOP ==================== -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        // Product data for modal with image paths
+        const productDetails = {
+            1: {
+                img: 'images/huil.jpeg',
+                category: 'Soin visage',
+                name: 'Crème Visage Éclat',
+                desc: 'Enrichie en beurre de karité pur, huile de jojoba et vitamine E, cette crème onctueuse pénètre rapidement pour hydrater en profondeur, raviver l\'éclat naturel et lisser les ridules. Testée dermatologiquement, elle convient à tous les types de peaux, même les plus sensibles. Sa texture légère laisse un fini satiné, parfait comme base de maquillage.',
+                benefits: ['Hydratation 24h', 'Éclat immédiat', 'Anti-oxydant', 'Sans parabène', 'Convient aux peaux sensibles', 'Fabriqué au Bénin'],
+                price: '4 000 - 7 000 FCFA',
+                whatsapp: 'https://wa.me/2290196633435?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20Cr%C3%A8me%20Visage%20%C3%89clat.'
+            },
+            2: {
+                img: 'images/creme.jpeg',
+                category: 'Soin pur',
+                name: 'Beurre de Karité Pur',
+                desc: 'Véritable or végétal, notre beurre de karité brut est extrait à froid de noix récoltées au nord du Bénin. Il conserve toutes ses propriétés nourrissantes et réparatrices. Utilisable sur le visage, le corps et les cheveux, il apaise les irritations, prévient le vieillissement cutané et redonne souplesse aux peaux sèches. Un indispensable de la beauté naturelle africaine.',
+                benefits: ['100% pur & brut', 'Pressé à froid', 'Nourrit intensément', 'Anti-âge puissant', 'Apaise les irritations', 'Polyvalent (visage, corps, cheveux)'],
+                price: '2 500 - 5 000 FCFA',
+                whatsapp: 'https://wa.me/2290196633435?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20le%20Beurre%20de%20Karité%20Pur.'
+            },
+            3: {
+                img: 'images/serum.jpeg',
+                category: 'Soin capillaire',
+                name: 'Huile Capillaire',
+                desc: 'Ce sérum capillaire marie le karité aux huiles de coco, d\'avocat et de ricin noir pour fortifier la fibre capillaire, stimuler la pousse et apporter une brillance éclatante. Sa formule non grasse s\'absorbe rapidement, idéale en bain d\'huile ou en soin quotidien sans rinçage. Adieu cheveux secs, ternes et cassants !',
+                benefits: ['Fortifie les cheveux', 'Stimule la pousse', 'Anti-casse', 'Brillance miroir', 'Formule légère', 'Sans silicone'],
+                price: '3 500 - 6 000 FCFA',
+                whatsapp: 'https://wa.me/2290196633435?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20l%27Huile%20Capillaire.'
+            },
+            4: {
+                img: 'images/kit.jpeg',
+                category: 'Coffret',
+                name: 'Kit Soin Complet',
+                desc: 'Découvrez la routine beauté parfaite dans un coffret élégant. Il contient un beurre de karité pur (100g), une crème visage éclat (50ml), un baume lèvres au karité (10ml) et un savon artisanal au karité. Chaque produit est fabriqué artisanalement au Bénin, sans ingrédients chimiques. Le cadeau idéal pour chérir votre peau ou gâter une personne chère.',
+                benefits: ['4 produits essentiels', 'Routine complète', 'Coffret cadeau premium', 'Fait main', 'Zéro déchet', 'Livraison offerte'],
+                price: '18 000 FCFA',
+                whatsapp: 'https://wa.me/2290196633435?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20le%20Kit%20Soin%20Complet.'
+            }
+        };
+
+        // ============ MODAL FUNCTIONS ============
+        const modal = document.getElementById('productModal');
+        const modalImg = document.getElementById('modalImageSrc');
+        const modalCategory = document.getElementById('modalCategory');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDesc = document.getElementById('modalDesc');
+        const modalBenefits = document.getElementById('modalBenefits');
+        const modalPrice = document.getElementById('modalPrice');
+        const modalWhatsappBtn = document.getElementById('modalWhatsappBtn');
+
+        function openProductModal(productId) {
+            const data = productDetails[productId];
+            if (!data) return;
+
+            modalImg.src = data.img;
+            modalImg.alt = data.name;
+            modalCategory.textContent = data.category;
+            modalTitle.textContent = data.name;
+            modalDesc.textContent = data.desc;
+            modalBenefits.innerHTML = data.benefits.map(b => `<li>${b}</li>`).join('');
+            modalPrice.textContent = data.price;
+            modalWhatsappBtn.href = data.whatsapp;
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Fermer la modale en cliquant en dehors du contenu
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Fermer avec la touche Échap
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        (function() {
+            // ============ LOADER ============
+            const loader = document.getElementById('loader');
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    loader.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 600);
+            });
+            document.body.style.overflow = 'hidden';
+
+            // ============ NAVBAR SCROLL ============
+            const navbar = document.getElementById('navbar');
+            const backToTop = document.getElementById('backToTop');
+
+            function updateNavbar() {
+                const scrollY = window.scrollY;
+                if (scrollY > 60) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+                if (scrollY > 500) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            }
+            window.addEventListener('scroll', updateNavbar, { passive: true });
+
+            // ============ BACK TO TOP ============
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // ============ MOBILE NAV TOGGLE ============
+            const navToggle = document.getElementById('navToggle');
+            const navLinks = document.getElementById('navLinks');
+
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            window.closeNav = function() {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            };
+
+            document.addEventListener('click', (e) => {
+                if (!navLinks.contains(e.target) && !navToggle.contains(e.target) && navLinks.classList.contains('active')) {
+                    closeNav();
+                }
+            });
+
+            // ============ REVEAL ON SCROLL ============
+            const revealElements = document.querySelectorAll('.reveal');
+            if ('IntersectionObserver' in window) {
+                const revealObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            revealObserver.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.15,
+                    rootMargin: '0px 0px -40px 0px'
+                });
+                revealElements.forEach(el => revealObserver.observe(el));
+            } else {
+                revealElements.forEach(el => el.classList.add('visible'));
+            }
+
+            // ============ STAT COUNTER ANIMATION ============
+            const statNumbers = document.querySelectorAll('.hero-stat-number[data-count]');
+            if ('IntersectionObserver' in window) {
+                const statsObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const el = entry.target;
+                            const target = parseInt(el.getAttribute('data-count'));
+                            const duration = 2000;
+                            const startTime = performance.now();
+                            const startVal = 0;
+
+                            function updateCounter(timestamp) {
+                                const elapsed = timestamp - startTime;
+                                const progress = Math.min(elapsed / duration, 1);
+                                const easeOut = 1 - Math.pow(1 - progress, 3);
+                                const current = Math.round(startVal + (target - startVal) * easeOut);
+                                el.textContent = current.toLocaleString() + (target === 100 ? '%' : target === 3 ? '' : '+');
+                                if (progress < 1) {
+                                    requestAnimationFrame(updateCounter);
+                                } else {
+                                    el.textContent = target.toLocaleString() + (target === 100 ? '%' : target === 3 ? '' : '+');
+                                }
+                            }
+                            requestAnimationFrame(updateCounter);
+                            statsObserver.unobserve(el);
+                        }
+                    });
+                }, { threshold: 0.6 });
+                statNumbers.forEach(el => statsObserver.observe(el));
+            } else {
+                statNumbers.forEach(el => {
+                    const target = parseInt(el.getAttribute('data-count'));
+                    el.textContent = target.toLocaleString() + (target === 100 ? '%' : target === 3 ? '' : '+');
+                });
+            }
+
+            // ============ FAQ ACCORDION ============
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    faqItems.forEach(fi => fi.classList.remove('active'));
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+            // ============ CONTACT FORM VALIDATION ============
+            const contactForm = document.getElementById('contactForm');
+            const formSuccessMsg = document.getElementById('formSuccessMsg');
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                let valid = true;
+                const name = document.getElementById('contactName');
+                const email = document.getElementById('contactEmail');
+                const message = document.getElementById('contactMessage');
+                [name, email, message].forEach(f => f.classList.remove('form-error'));
+
+                if (!name.value.trim()) {
+                    name.classList.add('form-error');
+                    valid = false;
+                }
+                if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+                    email.classList.add('form-error');
+                    valid = false;
+                }
+                if (!message.value.trim()) {
+                    message.classList.add('form-error');
+                    valid = false;
+                }
+
+                if (valid) {
+                    formSuccessMsg.classList.add('show');
+                    contactForm.reset();
+                    setTimeout(() => {
+                        formSuccessMsg.classList.remove('show');
+                    }, 5000);
+                }
+            });
+
+            // ============ SMOOTH SCROLL ============
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#') return;
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth' });
+                        if (navLinks.classList.contains('active')) {
+                            closeNav();
+                        }
+                    }
+                });
+            });
+
+            // ============ PARALLAX HERO ============
+            const heroOrbs = document.querySelectorAll('.hero-bg-orb');
+            window.addEventListener('mousemove', function(e) {
+                const x = (e.clientX / window.innerWidth - 0.5) * 20;
+                const y = (e.clientY / window.innerHeight - 0.5) * 20;
+                heroOrbs.forEach((orb, i) => {
+                    const factor = (i + 1) * 0.6;
+                    orb.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
+                });
+            }, { passive: true });
+
+            console.log('✨ Perle de Karité - Site prêt. Naturellement belle, naturellement vous.');
+        })();
+    </script>
+</body>
+</html>
