@@ -1176,6 +1176,7 @@
 
         /* ============ MOBILE ADJUSTMENTS ============ */
         @media (max-width: 600px) {
+            .loader-logo { font-size: 1.6rem; }
             .hero-stats { gap: 16px; }
             .hero-stat-number { font-size: 1.5rem; }
             .products-grid { grid-template-columns: 1fr; gap: 12px; }
@@ -1188,7 +1189,13 @@
             .benefits-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
             .benefit-card { padding: 20px 12px; }
             .testimonials-grid { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 25px; } /* Empilement sur une seule colonne */
+            .footer { padding: 40px 20px 20px; }
+            .footer-col h4 { font-size: 1rem; }
+            .footer-col ul li a { font-size: 0.75rem; }
+            .footer-bottom { font-size: 0.65rem; padding-top: 15px; }
+            .footer-bottom br { display: none; } /* Supprime le <br> sur mobile */
+            .footer-bottom strong { display: block; margin-top: 5px; } /* KStalker sur une ligne dédiée */
             .modal-content { padding: 25px 20px; }
         }
     </style>
